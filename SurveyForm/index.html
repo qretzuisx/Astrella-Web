@@ -6,8 +6,10 @@
     <title>Survey Form</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<h1 id="title">Survery Form</h1>
-<p id="description">We would like to take a little bit of your time to take this survey.</p>
+<h1 id="title">Customer Satisfaction with Online Services</h1>
+<p id="description">The purpose of the survey is to gather insights about their recent experience with our new online service platform.
+    We highly encourage participants to share honest feedback which will help us improve our service.
+</p>
 <form id="survey-form">
     <label id="name-label" for="name">Name</label>
     <input id="name" type="text" placeholder="Enter your name" required>
@@ -16,23 +18,43 @@
     <input id="email" type="email" placeholder="Enter your email" required>
     <br>
     <label id="number-label" for="number">Age (Optional)</label>
-    <input id="number" type="number" min="10" max="100" placeholder=" Age">
+    <input id="number" type="number" min="18" max="100" placeholder=" Age">
     <br>
-    <label id="dropdown">How are you feeling right now?
-        <section id="dropdown" required>
-        <option disabled selected> pick the best mood you are currently feeling</option>
-        <option value="1">Happy</option>
-        <option value="2 ">Normal</option>
-        <option value="3">Sad</option>
-        <option value="4"> Stressed</option>  
-        </section>
-    </label>
+    <label for="dropdown">Gender</label>
+        <select id="dropdown" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="non-binary">Non-Binary</option>
+            <option value="prefernottosay">Prefer not to say</option>
+        </select>
+        <br>
+    <label>Which service(s) do you use? (Check all that apply)</label>
     <br>
-    <label>Gender</label>
-    <input type="radio" id="male" name="gender" value="male">
-    <label for="male">male</label>
-    <input type="radio" id="female" name="gender" value="female">
-    <label for="female">female</label>
+    <input type="checkbox" id="shopping" name="service" value="shopping">
+    <label for="shopping">Online Shopping</label>
+    <input type="checkbox" id="subcription" name="service" value="subcription">
+    <label for="subcription">Subsciption Services</label>
+    <input type="checkbox" id="customer" name="service" value="customer">
+    <label for="customer">Customer Service</label>
+    <input type="checkbox" id="booking" name="service" value="booking">
+    <label for="booking">Booking Service</label>
+    <br>
+    <label>How often do you use our services?</label>
+    <input type="radio" id="daily" name="often" value="daily">
+    <label for="daily">Daily</label>
+    <input type="radio" id="weekly" name="often" value="weekly">
+    <label for="weekly">Weekly</label>
+    <input type="radio" id="monthly" name="often" value="monthly">
+    <label for="monthly">Monthly</label>
+    <input type="radio" id="rarely" name="often" value="rarely">
+    <label for="rarely">Rarely</label>
+    <br>
+    <label for="comments">What could we improve to make your experience better?</label>
+    <br>
+    <textarea name="comments" id="comments">Is there any feature you wish to see in the future?</textarea>
+    <br>
+    <input type="submit" id="submit" value="submit">
+    <p>Thank you for answering the survey !</p>
  
 </form>
 <body>
