@@ -6,11 +6,34 @@
     <title>Survey Form</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<h1 id="title"></h1>
-<p id="description"></p>
+<h1 id="title">Survery Form</h1>
+<p id="description">We would like to take a little bit of your time to take this survey.</p>
 <form id="survey-form">
-    <input id="name" type="text">
-    <input id="email" type="email">
+    <label id="name-label" for="name">Name</label>
+    <input id="name" type="text" placeholder="Enter your name" required>
+    <br>
+    <label id="email-label" for="email"> Email</label>
+    <input id="email" type="email" placeholder="Enter your email" required>
+    <br>
+    <label id="number-label" for="number">Age (Optional)</label>
+    <input id="number" type="number" min="10" max="100" placeholder=" Age">
+    <br>
+    <label id="dropdown">How are you feeling right now?
+        <section id="dropdown" required>
+        <option disabled selected> pick the best mood you are currently feeling</option>
+        <option value="1">Happy</option>
+        <option value="2 ">Normal</option>
+        <option value="3">Sad</option>
+        <option value="4"> Stressed</option>  
+        </section>
+    </label>
+    <br>
+    <label>Gender</label>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">male</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">female</label>
+ 
 </form>
 <body>
     
