@@ -1,0 +1,10 @@
+main {
+text-align: center;
+}
+
+img {
+    max-width: 60%;
+    display: block;
+    height: auto;
+    margin: 0 auto;
+}
