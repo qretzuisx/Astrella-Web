@@ -18,15 +18,15 @@
                     <label id="name-label" for="name" class="survey-label">Name </label>
                     <input id="name" type="text" class="survey-label" placeholder="Enter your name" required>
                 </div>
-                <div id="survey-input">
+                <div class="survey-input">
                     <label id="email-label" for="email" class="survey-label"> Email</label>
                     <input id="email" type="email" class="survey-label" placeholder="Enter your email" required>
                 </div>
-                <div id="survey-input">
+                <div class="survey-input">
                     <label id="number-label" class="survey-label" for="number">Age (Optional)</label>
                     <input id="number" type="number" class="sur" min="18" max="100" placeholder=" Age">
                 </div>
-                <div id="survey-input">      
+                <div class="survey-input">      
                     <label for="dropdown" class="survey-label">Gender</label>
                     <select id="dropdown"  class="survey-select" required>
                         <option value="male">Male</option>
@@ -83,19 +83,23 @@
                 <textarea name="comments" id="comments">Is there any feature you wish to see in the future?</textarea>
             </div>
 
-            <button class="survey-btn">Submit</button>
-            <p id="thank-you" style="text-align: center; margin-top: 20px;">Thank you for answering the survey !</p>
+            <button  class="survey-btn">Submit</button>
+            <div class="thankyou" id="ThankYouMessage">Thank you for answering the survey.</div>
+        
         </form>
         </div>
     </div>
     <script>
         const form = document.getElementById('survey-form');
-        const ThankYouMessage = document.getElementById('thank-you')
-
+        const ThankYouMessage =document.getElementById('ThankYouMessage');
         form.addEventListener('submit', function(event) {
             event.preventDefault();
+
+            form.style.display = 'none';
             ThankYouMessage.style.display = 'block';
         });
+           
+     
     </script>
 </body>
 </html>
