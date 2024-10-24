@@ -6,65 +6,96 @@
     <title>Survey Form</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<h1 id="title">Customer Satisfaction with Online Services</h1>
-<p id="description">The purpose of the survey is to gather insights about your recent experience with our new online service platform.
-    We highly encourage participants to share honest feedback which will help us improve our service.
-</p>
-<form id="survey-form">
-    <label id="name-label" for="name">Name</label>
-    <input id="name" type="text" placeholder="Enter your name" required>
-    <br>
-    <label id="email-label" for="email"> Email</label>
-    <input id="email" type="email" placeholder="Enter your email" required>
-    <br>
-    <label id="number-label" for="number">Age (Optional)</label>
-    <input id="number" type="number" min="18" max="100" placeholder=" Age">
-    <br>
-    <label for="dropdown">Gender</label>
-        <select id="dropdown" required>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="non-binary">Non-Binary</option>
-            <option value="prefernottosay">Prefer not to say</option>
-        </select>
-        <br>
-    <label>Which service(s) do you use? (Check all that apply)</label>
-    <br>
-    <input type="checkbox" id="shopping" name="service" value="shopping">
-    <label for="shopping">Online Shopping</label>
-    <input type="checkbox" id="subcription" name="service" value="subcription">
-    <label for="subcription">Subscription Service</label>
-    <input type="checkbox" id="customer" name="service" value="customer">
-    <label for="customer">Customer Service</label>
-    <input type="checkbox" id="booking" name="service" value="booking">
-    <label for="booking">Booking Service</label>
-    <br>
-    <label>How often do you use our services?</label>
-    <input type="radio" id="daily" name="often" value="daily">
-    <label for="daily">Daily</label>
-    <input type="radio" id="weekly" name="often" value="weekly">
-    <label for="weekly">Weekly</label>
-    <input type="radio" id="monthly" name="often" value="monthly">
-    <label for="monthly">Monthly</label>
-    <input type="radio" id="rarely" name="often" value="rarely">
-    <label for="rarely">Rarely</label>
-    <br>
-    <label>Rate your overall experience (Rating 1 to be the highest and 5 to be the lowest)</label>
-    <input type="text">
-    <input type="text">
-    <input type="text">
-    <input type="text">
-    <input type="text">
-    <br>
-    <label for="comments">What could we improve to make your experience better?</label>
-    <br>
-    <textarea name="comments" id="comments">Is there any feature you wish to see in the future?</textarea>
-    <br>
-    <input type="submit" id="submit" value="submit">
-    <p>Thank you for answering the survey !</p>
- 
-</form>
 <body>
-    
+    <div class="main-container">
+        <div class="form-container">
+            <h1 id="title">Customer Satisfaction with Online Services</h1>
+            <p id="description">
+            The purpose of the survey is to gather insights about your recent experience with our new online service platform. 
+            We highly encourage participants to share honest feedback which will help us improve our service.</p>
+            <form id="survey-form">
+                <div class="survey-input">
+                    <label id="name-label" for="name" class="survey-label">Name </label>
+                    <input id="name" type="text" class="survey-label" placeholder="Enter your name" required>
+                </div>
+                <div id="survey-input">
+                    <label id="email-label" for="email" class="survey-label"> Email</label>
+                    <input id="email" type="email" class="survey-label" placeholder="Enter your email" required>
+                </div>
+                <div id="survey-input">
+                    <label id="number-label" class="survey-label" for="number">Age (Optional)</label>
+                    <input id="number" type="number" class="sur" min="18" max="100" placeholder=" Age">
+                </div>
+                <div id="survey-input">      
+                    <label for="dropdown" class="survey-label">Gender</label>
+                    <select id="dropdown"  class="survey-select" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="non-binary">Non-Binary</option>
+                        <option value="prefernottosay">Prefer not to say</option>
+                    </select>
+                </div>
+            </div>
+            <div id="survey-input">
+                <label class="survey-label">Which service(s) do you use? (Check all that apply)</label>
+                <div>
+                    <input type="checkbox" id="shopping" name="service" value="shopping">
+                    <label for="shopping">Online Shopping</label>
+
+                    <input type="checkbox" id="subcription" name="service" value="subcription">
+                    <label for="subcription">Subscription Service</label>
+
+                    <input type="checkbox" id="customer" name="service" value="customer">
+                    <label for="customer">Customer Service</label>
+
+                    <input type="checkbox" id="booking" name="service" value="booking">
+                    <label for="booking">Booking Service</label>
+                </div>
+            </div>
+            <div class="survey-cointainer">
+                <label class="survey-label">How often do you use our services?</label>
+                <div class="survey-flex">
+                    <div class="survey-radio">
+                        <input type="radio" id="daily" name="often" value="daily">
+                        <label for="daily">Daily</label>
+                    </div>
+                    <div class="survey-radio">
+                        <input type="radio" id="weekly" name="often" value="weekly">
+                        <label for="weekly">Weekly</label>
+                    </div>
+                    <div class="survey-radio">
+                        <input type="radio" id="monthly" name="often" value="monthly">
+                        <label for="monthly">Monthly</label>
+                    </div>
+                    <div class="survey-radio">
+                        <input type="radio" id="rarely" name="often" value="rarely">
+                        <label for="rarely">Rarely</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="survey-input">
+                <label class="survey-label"> Rate your Overall experience (1 being the highest and 5 for lowest)</label>
+                <input type="number" class="survey-input" min="1" max="5" placeholder="Enter your rating" required>
+            </div>
+            <div class="survey-input">
+                <label for="comments">What could we improve to make your experience better?</label>
+                <textarea name="comments" id="comments">Is there any feature you wish to see in the future?</textarea>
+            </div>
+
+            <button class="survey-btn">Submit</button>
+            <p id="thank-you" style="text-align: center; margin-top: 20px;">Thank you for answering the survey !</p>
+        </form>
+        </div>
+    </div>
+    <script>
+        const form = document.getElementById('survey-form');
+        const ThankYouMessage = document.getElementById('thank-you')
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            ThankYouMessage.style.display = 'block';
+        });
+    </script>
 </body>
 </html>
