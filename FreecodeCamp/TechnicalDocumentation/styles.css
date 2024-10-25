@@ -3,7 +3,7 @@ body {
     font-family: Poppins, sans-serif;
     line-height: 1.6;
     margin: 0;
-    background: linear-gradient(135deg, #ffdd59, #ff7eb9);
+    background-image:url(img/crumpled.jpg) ;
     padding: 20px;
     color: #333;
 }
@@ -14,20 +14,22 @@ body {
     left: 0;
     width: 250px;
     height: 100%;
-    background: linear-gradient(135deg, #e59a0f, #800080);
+    background-image: url(img/3.png);
     color: white;
     padding: 20px;
     box-sizing: border-box;
     z-index: 10;
     font-family: icarlylogo;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
-    border-radius: 3px;
+    border-radius: 6px;
     transform: width 0.3s;
 }
 
 #navbar header {
     text-align: center;
     margin-bottom: 20px;
+    box-sizing: border-box;
+    color: rgb(12, 18, 56);
 }
 
 #header-content {
@@ -42,7 +44,7 @@ body {
     border-radius: 5px;
     margin-bottom: 10px;
     text-decoration: none;
-    color: #fff;
+    color: #800080;
     font-size: 1.5rem;
     transition: transform 0.2s, background-color 0.2s;
     border-radius: 5px;
@@ -51,7 +53,7 @@ body {
 
 #navbar a:hover {
     background-color: #800080 ;
-    color: #fff;
+    color: rgb(0, 213, 255);
     transform: scale(1.05);
 }
 
@@ -80,8 +82,6 @@ header {
     margin-bottom: 20px;
     text-align: center;
     margin: 40px 0 20px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-
 }
 
 h1, h2 ,h3 {
@@ -107,7 +107,6 @@ img {
 
 p {
     margin-bottom: 15px;
-    text-align: justify;
 }
 
 code {
