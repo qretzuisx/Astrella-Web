@@ -1,6 +1,6 @@
 
 body {
-    font-family: Poppins, sans-serif;
+    font-family:sans-serif;
     line-height: 1.6;
     margin: 0;
     background-image:url(img/crumpled.jpg) ;
@@ -115,16 +115,6 @@ code {
     border-radius: 5px;
 }
 
-/* #color-ring {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: 10px solid #ffdd59;
-    background-image: radial-gradient(circle at center, #ff7eb9, #e59a0f);
-    margin-top: 10px;
-    background-image: cover;
-} */
-
 p, code, ul {
     margin-bottom: 10px;
 }
@@ -134,7 +124,7 @@ p, code, ul {
         width: 100%;
         height: auto;
         position: relative;
-        background: linear-gradient(135deg, #ffdd59, #ff7eb9);
+        background: white;
         text-align: center;
     }
 

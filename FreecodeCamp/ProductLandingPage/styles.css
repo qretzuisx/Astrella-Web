@@ -1,6 +1,5 @@
 * {
     font-family: Arial, sans-serif;
-    color: #333;
 }
 
 header {
@@ -21,14 +20,14 @@ header {
     margin-bottom: 1em;
     position: sticky;
     top: 0;
-    background-color: #fff9ff;
+    background-color:#115c15;
     padding: 10px 0;
 }
 
 #nav-bar ul {
     list-style-type: none;
-    color: #333;
     font-weight: bold;
+    color: white;
 }
 
 #features, #pricing, #contact, #video {
@@ -65,7 +64,7 @@ header {
 }
 
 footer {
-    background-color: #d8e4e3;
+    background-color: #115c15;
     text-align: center;
     padding: 1em 0;
 }
