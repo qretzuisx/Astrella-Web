@@ -11,7 +11,6 @@
         <div class="form-container">
             <h1 id="title">Customer Satisfaction with Online Services</h1>
             <p id="description">
-            The purpose of the survey is to gather insights about your recent experience with our new online service platform. 
             We highly encourage participants to share honest feedback which will help us improve our service.</p>
             <form id="survey-form">
                 <div class="survey-input">
@@ -36,20 +35,25 @@
                     </select>
                 </div>
             </div>
-            <div id="survey-input">
-                <label class="survey-label">Which service(s) do you use? (Check all that apply)</label>
-                <div>
-                    <input type="checkbox" id="shopping" name="service" value="shopping">
-                    <label for="shopping">Online Shopping</label>
-
-                    <input type="checkbox" id="subcription" name="service" value="subcription">
-                    <label for="subcription">Subscription Service</label>
-
-                    <input type="checkbox" id="customer" name="service" value="customer">
-                    <label for="customer">Customer Service</label>
-
-                    <input type="checkbox" id="booking" name="service" value="booking">
-                    <label for="booking">Booking Service</label>
+            <div>
+                <div id="survey-input"> 
+                    <label class="survey-label">Which service(s) do you use? (Check all that apply)</label>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="shopping" name="service" value="shopping">
+                        <label for="shopping">Online Shopping</label>
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="subcription" name="service" value="subcription">
+                        <label for="subcription">Subscription Service</label>
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="customer" name="service" value="customer">
+                        <label for="customer">Customer Service</label>
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="booking" name="service" value="booking">
+                        <label for="booking">Booking Service</label>
+                    </div>
                 </div>
             </div>
             <div class="survey-cointainer">
@@ -74,12 +78,23 @@
                 </div>
             </div>
 
+            <div class="survey-rating">
+                <label class="survey-label">How was your experience in our services? </label>
+                <div class="rating">
+                    <input type="radio" id="star1" name="rating" value="1" />
+                    <label for="star1" class="star">&#9733;</label>
+                    <input type="radio" id="star2" name="rating" value="2" />
+                    <label for="star2" class="star">&#9733;</label>
+                    <input type="radio" id="star3" name="rating" value="3" />
+                    <label for="star3" class="star">&#9733;</label>
+                    <input type="radio" id="star4" name="rating" value="4" />
+                    <label for="star4" class="star">&#9733;</label>
+                    <input type="radio" id="star5" name="rating" value="5" />
+                    <label for="star5" class="star">&#9733;</label>
+                 
+                </div>
+            </div>            
             <div class="survey-input">
-                <label class="survey-label"> Rate your Overall experience (1 being the highest and 5 for lowest)</label>
-                <input type="number" class="survey-input" min="1" max="5" placeholder="Enter your rating" required>
-            </div>
-            <div class="survey-input">
-                <label for="comments">What could we improve to make your experience better?</label>
                 <textarea name="comments" id="comments">Is there any feature you wish to see in the future?</textarea>
             </div>
 
@@ -98,8 +113,6 @@
             form.style.display = 'none';
             ThankYouMessage.style.display = 'block';
         });
-           
-     
     </script>
 </body>
 </html>
