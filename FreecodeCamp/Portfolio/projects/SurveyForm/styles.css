@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-image: url("img/6073424.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    margin: 0;
+    overflow-y: auto;
+}
+
+.main-container {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 600px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.form-container {
+    padding: 25px;
+    border-radius: 8px;
+}
+
+h1 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+p {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.survey-input {
+    margin-bottom: 20px;
+}
+
+
+
+
+.survey-label, .survey-rating {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.survey-input input,
+.survey-select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+    font-size: 16px;
+    outline: none;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease-in-out;
+}
+
+.survey-input input:focus,
+.survey-select:focus,
+textarea:focus {
+    border-color: #7b00ff;
+}
+
+.survey-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    background: linear-gradient(to right, #7b00ff, #120552);
+    color: white;
+    transition: background 0.4s ease;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; 
+    cursor: pointer; 
+}
+
+.checkbox-container input[type="checkbox"] {
+    display: none; 
+}
+
+.checkbox-container label {
+    position: relative;
+    padding-left: 30px; 
+    font-size: 16px; 
+}
+
+.checkbox-container label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px; 
+    height: 20px; 
+    border-radius: 50%; 
+    border: 2px solid #ccc; 
+    background-color: white; 
+    transition: background-color 0.3s, border-color 0.3s; 
+}
+
+.checkbox-container input[type="checkbox"]:checked + label::before {
+    background-color: #7b00ff; 
+    border-color: #7b00ff; 
+}
+
+.checkbox-container input[type="checkbox"]:checked + label {
+    color: white; 
+}
+
+
+
+.rating {
+    display: flex;
+    justify-content: center; 
+    margin-bottom: 20px;
+}
+
+.rating input {
+    display: none; 
+}
+
+.rating label {
+    font-size: 36px; 
+    color: #ccc; 
+    cursor: pointer;
+    transition: color 0.2s ease;
+    margin: 0 35px; 
+}
+
+.rating input:checked ~ label {
+    color: #ffcc00; 
+}
+
+.rating label:hover,
+.rating label:hover ~ label {
+    color: #ffcc00; 
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+.survey-flex {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.survey-radio label {
+    margin-left: 5px;
+}
+
+.survey-radio {
+    display: flex;
+    align-items: center;
+}
+
+.survey-radio input {
+    display: none;
+}
+
+.survey-radio label {
+    display: inline-block;
+    padding: 10px 15px;
+    border: 2px solid #7b00ff;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.survey-radio input:checked + label {
+    background-color: #7b00ff;
+    color: white;
+}
+
+.survey-radio label:hover {
+    background-color: #eee;
+}
+
+@media screen and (max-width: 425px) {
+    .main-container {
+        width: 93%;
+    }
+}
+
+.thankyou {
+    display: none;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+}
