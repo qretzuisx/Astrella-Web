@@ -23,7 +23,7 @@ main {
     max-width: 900px;
     margin:  0 auto;
     padding: 20px;
-    background-color: white;
+    background-color: #fffef5;
     border-radius: 5px;
     box-shadow: 0 4px 8px;
 }

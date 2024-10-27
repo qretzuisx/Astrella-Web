@@ -9,34 +9,74 @@
 <body>
     <header id="header">
         <nav id="nav-bar">
-            <img id="header-img" src="" alt="" class="logo">
             <ul>
-                <a class="nav-link" href=""></a>
-                <a class="nav-link" href=""></a>
-                <a class="nav-link" href=""></a>
-                <a class="nav-link" href=""></a>
+                <li><a class="nav-link" href="#features">Features</a></li>
+                <li><a class="nav-link" href="#pricing">Pricing</a></li>
+                <li><a class="nav-link" href="#contact">Contact</a></li>
             </ul>
         </nav>
+        <img id="header-img" src="img/crayola.png" alt="crayola logo">
+        <h1>Crayola Crayons</h1>
+        <p>Buy your favorite Crayola Colors, one at a time!</p>
+       
     </header>
 
-    <div id="container">
-        <section class="message-box">
-            <h1></h1>
-            <form id="form" action="">
-                <input id="email" type="email" name="email" placeholder="example@.com">
-                <input id="submit" type="submit" value="Get Started" class="btn">
-            </form>
-        </section>
+    <section id="features">
+        <h2>Why Choose Crayola?</h2>
+        <div class="feature">
+            <h3>Vibrant Colors</h3>
+            <p>Our crayons are known for their rich, vibrant hues.</p>
+        </div>
+        <div class="feature">
+            <h3>Safe for Kids</h3>
+            <p>Non-toxic and safe for all ages.</p>
+        </div>
+    </section>
 
-        <section id="features">
-            <div class="feature">
-                
-
+    <section id="pricing">
+        <h2>Buy Crayons Individually</h2>
+        <p>Select your favorite colors and purchase per set/piece.</p>
+        <div id="pricing-options">
+            <div class="color-option">
+                <img src="img/red.png" alt="red color">
+                <h3>Red</h3>
+                <p>$1.00 each</p>
             </div>
+            <div class="color-option">
+                <img src="img/blue.png" alt="blue color">
+                <h3>Blue</h3>
+                <p>$1.00 each</p>
+            </div>
+            <div class="color-option">
+                <img src="img/yellow.png" alt="yellow color">
+                <h3>Yellow</h3>
+                <p>$1.00 each</p>
+            </div>
+            <div class="color-option">
+                <img src="img/green.png" alt="green color">
+                <h3>Green</h3>
+                <p>$1.00 each</p>
+            </div>
+        </div>
+    </section>
 
-        </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <input type="submit" id="submit" value="Send"/>
+        </form>
+    </section>
 
-    </div>
+    <section id="video">
+        <h2>Watch Our Crayola Video</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/7cAisV57WtA?si=UlmZaxwlZ9l4ge0K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </iframe>
+    </section>
+    <footer>
+        <p>&copy; 2024 Crayola Inc. | Crayons sold individually. </p>
+    </footer>
     
 </body>
 </html>
