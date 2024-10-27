@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Landing Page</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header id="header">
         <nav id="nav-bar">
+            <img src="img/crayola.png" alt="crayola cover" style="width: 5%;">
             <ul>
                 <li><a class="nav-link" href="#features">Features</a></li>
                 <li><a class="nav-link" href="#pricing">Pricing</a></li>
@@ -26,19 +29,16 @@
     </header>
 
     <section id="features">
-        <h2>Why Choose Crayola?</h2>
+        <h2>Vibrant Colors</h2>
         <div class="feature">
-            <h3>Vibrant Colors</h3>
             <p>Our crayons are known for their rich, vibrant hues.</p>
         </div>
-        <div class="feature">
-            <h3>Safe for Kids</h3>
-            <p>Non-toxic and safe for all ages.</p>
         </div>
+        <img src="img/4colors.png" alt="4colors" >
     </section>
 
     <section id="pricing">
-        <h2>Buy Crayons Individually</h2>
+        <h2>Buy Crayons Individualy</h2>
         <p>Select your favorite colors and purchase per set/piece.</p>
         <div id="pricing-options">
             <div class="color-option">
@@ -63,16 +63,18 @@
             </div>
         </div>
     </section>
-
     <section id="contact">
-        <h2>Contact Us</h2>
-        <form id="form" action="https://www.freecodecamp.com/email-submit">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
-            <input type="submit" id="submit" value="Send"/>
-        </form>
+        <div class="main-container">
+            <h1>Contacts Information</h1>
+            <form id="contact-form" action="https://www.freecodecamp.com/email-submit">
+                <div class="survey-input">
+                    <label for="email" class="survey-label">Email us or message us at  </label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                </div>
+            </form>
+    </section>    
     </section>
-    <img src="img/4colors.png" alt="4colors">
     <footer>
         <p>&copy; 2024 Crayola Inc. | Crayons sold individually. </p>
     </footer>
