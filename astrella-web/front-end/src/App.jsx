@@ -1,12 +1,15 @@
 import React from 'react'
+import {Route, Routes} from "react-router-dom";
+import Home from './pages/Home';
 
-function App() {
+
+const App = () => {
   return (
-    <div> <h1 classNamenpm="text-3xl font-bold underline">
-    Hello world!</h1>
-
-
-    </div>
+    <>
+    <Routes>
+      <Routes path="/" elemeny={<Home/>}/>
+    </Routes>
+    </>
   )
 }
 
