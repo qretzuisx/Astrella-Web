@@ -1,0 +1,175 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+background-image: url(img/bgkcrayola.png);
+    color: #333;
+}
+
+header {
+    background-color: white;
+    text-align: center;
+    padding: 2em 0;
+    position: relative;
+}
+
+#header h1 {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+#header p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+#nav-bar {  
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+    position: sticky;
+    top: 0;
+    padding: 10px;
+    background-color:#115c15;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#nav-bar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+
+}
+
+#nav-bar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+section {
+    padding: 2em;
+    text-align: center;
+}
+
+
+#header-img {
+    width: 50%;
+    margin-top: 1em;
+}
+
+#features {
+    color: white;
+    background-color: #115c15;
+    width: 100%;
+
+    
+}
+
+.feature {
+    margin-bottom: 1.5rem;
+}
+
+
+#pricing {
+    background-color: #d5dbd534;
+}
+
+#pricing-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 1em 0;
+}
+
+.color-option {
+    background-color: white;
+    padding: 1em;
+    width: 330px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 10px;
+    transition: transform 0.2s;
+}
+
+.color-option:hover {
+    transform: scale(1.05);
+}
+
+
+#form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+
+#contact {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.main-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 600px;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.survey-input {
+    margin-bottom: 20px;
+}
+
+.survey-label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s;
+}
+
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #115c15;
+}
+
+footer {
+    background-color: #115c15;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+} 
+
+@media (max-width: 768px) {
+    .pricing-options {
+        flex-direction: row;
+    }
+}

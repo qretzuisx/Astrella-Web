@@ -1,0 +1,153 @@
+
+body {
+    font-family:sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background-image:url(img/crumpled.jpg) ;
+    padding: 20px;
+    color: #333;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-image: url(img/3.png);
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 10;
+    font-family: icarlylogo;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    transform: width 0.3s;
+}
+
+#navbar header {
+    text-align: center;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    color: rgb(12, 18, 56);
+}
+
+#header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#navbar a {
+    display: block;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #800080;
+    font-size: 1.5rem;
+    transition: transform 0.2s, background-color 0.2s;
+    border-radius: 5px;
+  
+}
+
+#navbar a:hover {
+    background-color: #800080 ;
+    color: rgb(0, 213, 255);
+    transform: scale(1.05);
+}
+
+#main-doc {
+    margin-left: 250px;
+    padding: 20px;
+    margin-left: 250px;
+    padding: 20px;
+    box-shadow:  0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-image: url(img/icarly-bgk.png); 
+}
+
+.main-section {
+    margin: 20px 0;
+    padding: 20px;
+    background-image:url(img/crumpled.jpg) ;
+    border: 1px solid;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    font-family: icarlylogo;
+    font-size: 80px;
+    margin-bottom: 20px;
+    text-align: center;
+    margin: 40px 0 20px;
+}
+
+h1, h2 ,h3 {
+    color: #800080;
+
+}
+
+h1 {
+    margin-top: 0;
+    color: #800080;
+}
+
+h2, h3 {
+    margin-top: 10px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+code {
+    background-color: #f4f4f4;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+p, code, ul {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    #navbar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        background: white;
+        text-align: center;
+    }
+
+    #navbar a {
+        font-size: 1.2rem;
+    }
+
+    #main-doc {
+       margin: 0;
+       padding: 10px;
+    }
+
+    header {
+        font-size: 40px;
+    }
+    
+}
+
+@font-face {
+    font-family: icarlylogo;
+    src: url("fonts/iCarly.ttf");
+}
+
+
+
+

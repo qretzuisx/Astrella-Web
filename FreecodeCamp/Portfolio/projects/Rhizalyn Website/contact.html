@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="mydesign.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"> 
+</head>
+<body>
+    <div class="navigation">
+        <a href="index.html">Home</a>
+        <a href="about us.html">About</a>
+    </div>
+
+    <h2>Contact Us</h2>
+
+    <style>
+        body {font-family: 'Playfair Display', Montserrat;}
+        * {box-sizing: border-box;}
+        
+        input[type=text], select, textarea {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #000000;
+          border-radius: 4px;
+          box-sizing: border-box;
+          margin-top: 6px;
+          margin-bottom: 16px;
+          resize: vertical;
+          font: size 100px;;
+        }
+        
+        input[type=submit] {
+          background-color: #1A3A56;
+          color: rgba(255, 255, 255, 0.65);
+          padding: 12px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+        
+        input[type=submit]:hover {
+          background-color: #1A3A56;
+        }
+        
+        .container {
+          border-radius: 10px;
+          background-color: #f2f2f200;
+          padding: 25px;
+        }
+        </style>
+        </head>
+        <body>
+        
+        <div class="container">
+          <form action="/action_page.php">
+            <label for="fname"><b>First Name</b></label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        
+            <label for="lname"><b>Last Name</b></label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        
+            <label for="country"><b>Country</b></label>
+            <select id="country" name="country">
+              <option value="australia">Australia</option>
+              
+              <option value="canada">Canada</option>
+              <option value="usa">USA</option>
+              <option value="philippines">Philippines</option>
+            </select>
+        
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+        
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+        
+        </body>
+        </html>

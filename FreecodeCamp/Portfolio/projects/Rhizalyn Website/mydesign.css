@@ -1,0 +1,205 @@
+
+ body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', Montserrat;
+    background-size: cover;
+    background-image: url("images/a1.gif");
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.header {
+    background-color: #0e75dc2d;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    transition: background-color 0.3s ease-in-out;
+}
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #f8f8f8;
+    padding: 10px 0; 
+    width: 5000px; 
+    position: relative;
+    overflow: hidden;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #c2bbd95c;
+    padding: 5px 0;
+    width: 5000px; 
+    position: relative;
+    overflow: hidden;
+    border-top: 1.5px solid #344EA6;
+    border-bottom: 1.5px solid #344EA6; 
+    
+}
+
+.navigation::before,
+.navigation::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navigation a {
+    text-decoration: none;
+    font-size: 30px;
+    color: #1A3A56;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.navigation a:hover {
+    transform: scale(1.05);
+}
+
+.navigation a:active {
+    color: #e9e9e9; 
+}
+
+.container {
+    text-align: center;
+}
+
+.merged-title-image {
+    position: relative;
+    display: inline-block; 
+    overflow: hidden;
+}
+
+.merged-title-image img {
+    width: 100%;
+    height: auto; 
+    max-width: none; 
+}
+
+.merged-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #1A3A56;
+    font-size: 60px;
+    font-family: 'Playfair Display', Montserrat;
+    transition: font-size 0.3s ease-in-out;
+}
+
+.merged-title:hover {
+    font-size: 75px;
+}
+
+         .grid-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;    
+            grid-template-columns:repeat(4, 1fr);
+            padding: 10px;
+            margin-top: 20px;
+             column-gap: 5px;
+       }
+        .grid-item {
+            position: relative;
+            max-width: 300px;
+            overflow: hidden;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            margin: 10px;
+        }
+
+        .grid-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .grid-item img {
+            display: block;
+            max-width: 100%;
+        }
+
+        .description-overlay {
+            display: none;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            box-sizing: border-box;
+            border-radius: 0 0 5px 5px;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .grid-item:hover .description-overlay {
+            display: block;
+            opacity: 1;
+        }
+
+        .oval-button {
+            display: block;
+            margin: 20px auto;
+            background-color: #1a3a5600;
+            color:#1A3A56;
+            font-size: larger;
+            text-align: center;
+            padding: 10px 20px;
+            width: 100%;
+            border: 1px solid #344EA6;
+            border-radius: 20px;
+            text-decoration: none;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .oval-button:hover {
+            background-color: #9b99ac59;
+        }
+
+        .footer {
+            text-align: center;
+            background-color: #1A3A56;
+            width: 5000px;
+             padding: 20px  
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: larger;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .footer a:hover {
+            color: #8487ad8d;
+        }
