@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
     <nav className={`${styles.nav.base} ${
       scrolled ? styles.nav.scrolled : styles.nav.notScrolled
-      }`} aria-label='Main navigationgit'
+      }`} aria-label='Main navigation'
       ></nav>
   )
 }
