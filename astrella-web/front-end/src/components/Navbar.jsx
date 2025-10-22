@@ -13,7 +13,10 @@ const Navbar = () => {
     ];
 
   return (
-    <nav className={'$'}></nav>
+    <nav className={`${styles.nav.base} ${
+      scrolled ? styles.nav.scrolled : styles.nav.notScrolled
+      }`} aria-label='Main navigationgit'
+      ></nav>
   )
 }
 
