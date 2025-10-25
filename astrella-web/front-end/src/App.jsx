@@ -1,13 +1,13 @@
-import React from 'react'
-import {Route, Routes} from "react-router-dom";
+import React from 'react';
 import Home from './pages/Home';
+import { Route, Routes } from 'react-router-dom';
 
 
 const App = () => {
   return (
     <>
     <Routes>
-      <Routes path="/" elemeny={<Home/>}/>
+      <Route path='/' element={<Home />} />
     </Routes>
     </>
   )
