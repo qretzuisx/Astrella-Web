@@ -1,1 +1,1 @@
-﻿# Astrella-Web CIT6
+# Astrella-Web CIT6
