@@ -48,10 +48,9 @@ export const addGown = async (req, res) =>{
         });
 
         const image = optimizedImageUrl;
-        await Gown.create({...gown, owner: _id, image: [optimizedImageUrl]
-        });
+        await Gown.create({...gown, owner: _id, image});
 
-        res.json({success: true, message: "Gown Added", gown: NewGown})
+        res.json({success: true, message: "Gown Added"})
 
 
     } catch (error) {
@@ -59,3 +58,77 @@ export const addGown = async (req, res) =>{
             res.json({success: false, message: error.message})
     }
 }
+
+// API to list owner gowns
+export const getOwnersGowns = async (req, res)=>{
+    try {
+        const {_id} = req.user;
+        const gowns = await Gown.find({owner: _id })
+        res.json({success: true, gowns})
+    } catch (error) {
+            console.log(error.message);
+            res.json({success: false, message: error.message})
+        
+    }
+}
+
+// API to toggle Gown Availability
+export const ToggleGownAvailability = async (req, res)=>{
+    try {
+         const {_id} = req.user;
+         const {gownID} = req.body
+        const gown = await Gown.findById({carId})
+
+        if(gown.owner.toString() !== _id.toString()){
+            return res.json({ success: false, message: "Unauthorized" });
+        }
+
+        gown.isAvailable = !gown.isAvailable;
+        await gown.save();
+        res.json({success: true, message: "Availability Toggled"})
+    } catch (error) {
+        console.log(error.message);
+        res.json({success: false, message: error.message})
+        
+    }
+}
+
+// API to delete a gown
+export const DeleteGown = async (req, res)=>{
+    try {
+         const {_id} = req.user;
+         const {gownID} = req.body
+        const gown = await Gown.findById({carId})
+
+        if(gown.owner.toString() !== _id.toString()){
+            return res.json({ success: false, message: "Unauthorized" });
+        }
+
+        gown.owner = null;
+        gown.isAvailable = false;
+
+        await gown.save();
+        res.json({success: true, message: "Gown Remove"})
+    } catch (error) {
+        console.log(error.message);
+        res.json({success: false, message: error.message})
+        
+    }
+}
+
+// API Dashboard data
+export const getDashboardData = async (req, res)=>{
+    try {
+        const {_id, role } = req.user;
+
+        if(role !== 'owner'){
+            return res.json({ success: false, message: "Unauthorized" });
+        }
+
+        const gowns = await Gown.find({owner: _id})
+    } catch (error) {
+         console.log(error.message);
+        res.json({success: false, message: error.message})
+    }
+}
+

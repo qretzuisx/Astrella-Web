@@ -9,7 +9,7 @@ const gownSchema = new mongoose.Schema({
     price: {type: Number, required: true},
     size: {type: [String], default: ["Free Size"]},
     color: {type: String, required: true},
-    images: {type: [String], required: true},
+    image: { type: [String], required: true},
     available: {type: Boolean, default: true},
     verified: {type: Boolean, default: false},
 }, {timestamps: true})
