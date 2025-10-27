@@ -5,10 +5,10 @@ const bookingSchema = new mongoose.Schema({
     gown: {type: ObjectId, ref: "Gown", required: true},
     user: {type: ObjectId, ref: "User", required: true},
     owner: {type: ObjectId, ref: "User", required: true},
-    status: {type: String, enum: ["pending", "picked_up", "confirmed", "rejected"], default: "pending"},
-    pickupDate: {type: Date},
-    createdAt: {type: Date, default: Date.now},
-    updatedAt: {type: Date,}
+    status: {type: String, enum: ["pending", "confirmed", "canceled"], default: "pending"},
+    pickupDate: {type: Date, required: true},
+    returnDate: {type: Date, required: true},
+    price: {type: Number, required: true}
 }, {timestamps: true})
 
 const Booking = mongoose.model('Booking', bookingSchema)

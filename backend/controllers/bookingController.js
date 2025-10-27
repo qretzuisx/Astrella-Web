@@ -1,57 +1,92 @@
 import Booking from "../models/booking.js";
 import Gown from "../models/Gown.js";
 
-// API reserving a gown
-export const createBooking = async (req, res)=> {
+
+// check if gown is available in given date
+export const checkAvailability = async(gown, pickupDate, returnDate)=>{
+    const bookings = await Booking.find({
+        gown,
+        pickupDate: {$lte: returnDate},
+        returnDate: {$gte: pickupDate},
+    })
+    return bookings.length === 0;
+}
+
+// API for ai reccomendation
+// const reccomendationAI = async
+
+
+// API to create bookiing
+export const createBooking = async (req, res)=>{
     try {
         const {_id} = req.user;
-        const {gown} = req.body;
-     
-        const gownData = await Gown.findById(gown);
-        if(!gownData) {
-            return res.json({ success: false, message: "Gown not Found"});
+        const {gown, pickupDate, returnDate} = req.body;
+
+        const isAvailable = await checkAvailability(gown, pickupDate, returnDate)
+        if(!isAvailable){
+            return res.json({success: false, message: "Gown is not available"})
         }
 
-        const isAlreadyReserved = await Booking.findOne({gown, status: {$in: ["reserved", "confirmed"]}});
-        if(isAlreadyReserved) {
-            return res.json({success: false, message: "Gown is already reserved"});
-        }
+        const gownData = await Gown.findbyId(gown)
 
-        const newBooking = await Booking.create({user: _id, gown, owner: gownData.owner, status:"reserved"});
-        res.json({ success: true, message: "Gown reserved successfully. You will be notified by owner for pickup", data: newBooking});
-    } catch (error) {
-        console.log(error.message);
-        res.json({success: false, message: error.message});
-    }
-};
+        await Booking.create({gown, owner: gownData, user: _id, pickupDate, returnDate, price})
 
-// API to list user bookings
-export const getUserBookings = async (req, res)=> {
-    try {
-        const {_id} = req.user;
-        const bookings = await Booking.find({ user: _id}).populate("gown", "name image") .populate("owner", "name email");
-        res.json({ success: true, bookings });
+        res.json({ success: true, message: "Booking Created"})
 
     } catch (error) {
         console.log(error.message);
-        res.json({ success: false, message: error.message});
+        res.json({success: false, message: error.message})
     }
 }
 
-// API to get owner bookings
-export const getOwnerBookings = async (req, res)=> {
+// API to list user bookings
+export const getUserBooking = async (req, res)=>{
     try {
-        if(req.user.role !== 'owner'){
-            return res.json({ success: false, message: "Unauthorized"});
-        }
-
-
         const {_id} = req.user;
-        const booking = await Booking.find({ owner: _id}).populate("user", "name email").populate("gown", "name image");
-        res.json({success: true, bookings });
-       
+        const bookings = await Booking.find({ user: _id}).populate("gown").sort({createdAt: -1})
+        res.json({ success: true, bookings})
 
     } catch (error) {
-         res.json({ succes: false, message: error.message});
+        console.log(error.message);
+        res.json({success:false, message: error.message})
+    }
+}
+
+//API to get owner bookings
+export const getOwnerBooking = async (req, res)=>{
+    try {
+       if(req.user,role !== 'owner'){
+        return res.json({success: false, message: "Unauthorized" })
+       }
+       const bookings = await Booking.find({owner: req.user._id}).populate
+       ('gown user').select("-user.password").sort({created: -1 })
+       res.json({success: true, bookings})
+
+    } catch (error) {
+        console.log(error.message);
+        res.json({success:false, message: error.message})
+    }
+}
+
+//API change booking status
+export const changeBookingStatus = async (req, res)=>{
+    try {
+        const {_id} = req.user;
+        const {bookingId, status} = req.body;
+
+        const booking = await Booking.find.findbyId(bookingId)
+
+        if(booking.owner.toString() !== _id.toString()){
+            return res.json({success: false, message: "Unathorized"})
+        }
+
+        booking.status = status;
+        await booking.save()
+        res.json({success: true, message: "Status Updated"})
+
+    } catch (error) {
+        console.log(error.message);
+        res.json({success: false, message: error.message})
+        
     }
 }
