@@ -11,6 +11,7 @@ export const checkAvailability = async(gown, pickupDate, returnDate)=>{
     })
     return bookings.length === 0;
 }
+
 // API to create bookiing
 export const createBooking = async (req, res)=>{
     try {

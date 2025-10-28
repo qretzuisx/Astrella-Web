@@ -5,7 +5,7 @@ const gownSchema = new mongoose.Schema({
     owner: {type: ObjectId, ref: 'User'},
     name: {type: String, required: true},
     description: {type: String, required: true},
-    eventType: {type: String, enum: ["wedding", "traditional", "prom", "others"], default: "others"},
+    eventType: {type: String, enum: ["wedding", "traditional", "prom", "formal"], default: "others"},
     price: {type: Number, required: true},
     size: {type: [String], default: ["Free Size"]},
     color: {type: String, required: true},
