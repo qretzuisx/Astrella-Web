@@ -1,8 +1,18 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+=======
+
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Outfit:wght@100..900&display=swap');
+                                         
+>>>>>>> 7899002c1c30aa1b03f6cdb40b91a4dcbddaae99
 
 @import "tailwindcss";
 
+*{
+  font-family: "Geist", sans-serif;
+}
 
+<<<<<<< HEAD
 *{
   font-family: "Outfit", sans-serif;
 }
@@ -30,5 +40,14 @@
     'black': '#000000',
   }
 }
+=======
+:root {
+  --color-primary: #2563EB;
+  --color-primary-dull: #1F58D8;
+  --color-light: #F1F5F9;
+  --color-borderColor: #c4c7d2;
+}
+
+>>>>>>> 7899002c1c30aa1b03f6cdb40b91a4dcbddaae99
 
 

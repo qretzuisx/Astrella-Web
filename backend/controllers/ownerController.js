@@ -5,18 +5,18 @@ import Gown from "../models/Gown.js";
 import User from "../models/User.js";
 import fs from "fs";
 
-// API  user to owner
-export const changeRoleToOwner = async (req, res)=> {
-    try {
-        const {_id} = req.user;
-        await User.findByIdAndUpdate(_id, {role: "owner"})
-        res.json({success: true, message: "You can list gowns"})
-        } catch (error) {
-            console.log(error.message);
-            res.json({success: false, message: error.message})
+// // API  user to owner  (DISREGARD FOR NOW)
+// export const changeRoleToOwner = async (req, res)=> {
+//     try {
+//         const {_id} = req.user;
+//         await User.findByIdAndUpdate(_id, {role: "owner"})
+//         res.json({success: true, message: "You can list gowns"})
+//         } catch (error) {
+//             console.log(error.message);
+//             res.json({success: false, message: error.message})
         
-    }
-}
+//     }
+// }
 
 // API to list gowns
 export const addGown = async (req, res) =>{
@@ -79,7 +79,7 @@ export const ToggleGownAvailability = async (req, res)=>{
     try {
          const {_id} = req.user;
          const {gownID} = req.body
-        const gown = await Gown.findById({carId})
+        const gown = await Gown.findById({gownID})
 
         if(gown.owner.toString() !== _id.toString()){
             return res.json({ success: false, message: "Unauthorized" });
