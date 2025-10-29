@@ -2,7 +2,7 @@ import express from "express";
 import { protect } from "../middleware/auth.js";
 import { addGown, DeleteGown, getDashboardData, getOwnersGowns, ToggleGownAvailability, updateUserImage } from "../controllers/ownerController.js";
 import upload from "../middleware/multer.js";
-import { verifyOwner } from "../middleware/verify.js/index.js";
+import { verifyOwner } from "../middleware/verify.js";
 
 const ownerRouter = express.Router();
 
