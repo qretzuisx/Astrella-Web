@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
-=======
+
 
 @import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Outfit:wght@100..900&display=swap');
                                          
->>>>>>> 7899002c1c30aa1b03f6cdb40b91a4dcbddaae99
 
 @import "tailwindcss";
 
@@ -12,46 +9,12 @@
   font-family: "Geist", sans-serif;
 }
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-*{
-  font-family: "Outfit", sans-serif;
-}
-
-:root {
-  --color-primary: #F5E7E2;
-  --color-secondary: #AEC0D1;
-  --color-background: #EFE9DD;
-  --color-border: #B3B3B3;
-
-  --color-accent-warm: #C5B29B;
-  --color-accent-cool: #BFCFD0;
-}
-
 @theme {
-  colors: {
-    'primary':'var(--color-primary)',
-    'secondary' : 'var(--color-secondary)',
-    'background': 'var(--color-background)',
-    'border': 'var(--color-border)',
-    'accent-warm': 'var(--color-accent-warm)',
-    'accent-cool':'var(--color-accent-cool)',
-
-    'white': '#ffffff',
-    'black': '#000000',
-  }
-}
-=======
-:root {
-=======
-@theme {
->>>>>>> Stashed changes
   --color-primary: #2563EB;
   --color-primary-dull: #1A2350;
   --color-light: #F5F5F5;
   --color-borderColor: #1A2350;
 }
 
->>>>>>> 7899002c1c30aa1b03f6cdb40b91a4dcbddaae99
 
 
