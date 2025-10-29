@@ -1,19 +1,19 @@
 
-                                     /* "import a FONT in GOOGLEFONT" */
-/* @import url('@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Outfit:wght@100..900&display=swap'); */
-                                              /* "SAMPLE  */
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Outfit:wght@100..900&display=swap');
+                                         
 
 @import "tailwindcss";
 
+*{
+  font-family: "Geist", sans-serif;
+}
 
-  /* "import a FONT in GOOGLEFONT" */
-/* *{
-    font-family: "Outfit", sans-serif;
-} */
-     /* WILL be Applicable to all FONTS */
-
-
-
+:root {
+  --color-primary: #2563EB;
+  --color-primary-dull: #1F58D8;
+  --color-light: #F1F5F9;
+  --color-borderColor: #c4c7d2;
+}
 
 
 

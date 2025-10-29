@@ -1,5 +1,5 @@
-import logo from "./logo";
-import gmail_logo from "./gmail_logo";
+import logo from "./logo.svg";
+import gmail_logo from "./gmail_logo.svg";
 import facebook_logo from "./facebook_logo.svg";
 import instagram_logo from "./instagram_logo.svg";
 import twitter_logo from "./twitter_logo.svg";
@@ -32,14 +32,23 @@ import calendar_icon_colored from "./calendar_icon_colored.svg"
 import location_icon_colored from "./location_icon_colored.svg"
 import testimonial_image_1 from "./testimonial_image_1.png"
 import testimonial_image_2 from "./testimonial_image_2.png"
-import main_ai from "./main_car.png"
-import banner_gown_image from "./banner_gown_image.png"
+import main_ai from "./main_ai.jpg"
+import banner_gown_image from "./banner_gown_image.jpg"
 import user_profile from "./user_profile.png"
 import upload_icon from "./upload_icon.svg"
-import gown_image1 from "./gown_image1.png"
-import gown_image2 from "./gown_image2.png"
-import gown_image3 from "./gown_image3.png"
-import gown_image4 from "./gown_image4.png"
+import gown_image1 from "./gown_image1.jpg"
+import gown_image2 from "./gown_image2.jpg"
+import gown_image3 from "./gown_image3.jpg"
+import gown_image4 from "./gown_image4.jpg"
+
+
+export const eventTypeList = ['Wedding', 'Traditional', 'Prom', 'Formal']
+
+// AI RECCOMENDATION LIST
+export const bodyTypeList = ['']
+export const skinToneList = ['']
+export const heightList = ['']
+export const faceShapeList = ['']
 
 export const assets = {
     logo,
@@ -95,7 +104,7 @@ export const menuLinks = [
 export const ownerMenuLinks = [
     { name: "Dashboard", path: "/owner", icon: dashboardIcon, coloredIcon: dashboardIconColored },
     { name: "Add gown", path: "/owner/add-gown", icon: addIcon, coloredIcon: addIconColored },
-    { name: "Manage Gowns", path: "/owner/manage-gown", icon: carIcon, coloredIcon: gownIconColored },
+    { name: "Manage Gowns", path: "/owner/manage-gown", icon: gownIcon, coloredIcon: gownIconColored },
     { name: "Manage Bookings", path: "/owner/manage-bookings", icon: listIcon, coloredIcon: listIconColored },
 ]
 
