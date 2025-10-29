@@ -32,7 +32,7 @@ import calendar_icon_colored from "./calendar_icon_colored.svg"
 import location_icon_colored from "./location_icon_colored.svg"
 import testimonial_image_1 from "./testimonial_image_1.png"
 import testimonial_image_2 from "./testimonial_image_2.png"
-import main_ai from "./main_ai.jpg"
+import main_ai from "./main_ai.png"
 import banner_gown_image from "./banner_gown_image.jpg"
 import user_profile from "./user_profile.png"
 import upload_icon from "./upload_icon.svg"
@@ -226,7 +226,7 @@ export const dummyMyBookingsData = [
 
 
 export const dummyDashboardData = {
-    "totalCars": 4,
+    "totalGowns": 4,
     "totalBookings": 2,
     "pendingBookings": 0,
     "completedBookings": 2,

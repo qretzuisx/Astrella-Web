@@ -12,6 +12,7 @@
   font-family: "Geist", sans-serif;
 }
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 *{
   font-family: "Outfit", sans-serif;
@@ -42,10 +43,13 @@
 }
 =======
 :root {
+=======
+@theme {
+>>>>>>> Stashed changes
   --color-primary: #2563EB;
-  --color-primary-dull: #1F58D8;
-  --color-light: #F1F5F9;
-  --color-borderColor: #c4c7d2;
+  --color-primary-dull: #1A2350;
+  --color-light: #F5F5F5;
+  --color-borderColor: #1A2350;
 }
 
 >>>>>>> 7899002c1c30aa1b03f6cdb40b91a4dcbddaae99
