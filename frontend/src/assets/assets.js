@@ -1,4 +1,4 @@
-// import logo from "";
+import logo from "./logo";
 import gmail_logo from "./gmail_logo";
 import facebook_logo from "./facebook_logo.svg";
 import instagram_logo from "./instagram_logo.svg";
@@ -6,13 +6,13 @@ import twitter_logo from "./twitter_logo.svg";
 import menu_icon from "./menu_icon.svg";
 import search_icon from "./search_icon.svg"
 import close_icon from "./close_icon.svg"
-import users_icon from "./users_icon.svg"
-import car_icon from "./car_icon.svg"
-import location_icon from "./location_icon.svg"
-import fuel_icon from "./fuel_icon.svg"
+import size_icon from "./size_icon.svg"
+import fabric_icon from "./fabric_icon.svg"
+import event_icon from "./event_icon.svg"
+import color_icon from "./color_icon.svg"
 import addIcon from "./addIcon.svg"
-import carIcon from "./carIcon.svg"
-import carIconColored from "./carIconColored.svg"
+import gownIcon from "./gownIcon.svg"
+import gownIconColored from "./gownIconColored.svg"
 import dashboardIcon from "./dashboardIcon.svg"
 import dashboardIconColored from "./dashboardIconColored.svg"
 import addIconColored from "./addIconColored.svg"
@@ -42,7 +42,7 @@ import gown_image3 from "./gown_image3.png"
 import gown_image4 from "./gown_image4.png"
 
 export const assets = {
-    // logo,
+    logo,
     gmail_logo,
     facebook_logo,
     instagram_logo,
@@ -50,14 +50,14 @@ export const assets = {
     menu_icon,
     search_icon,
     close_icon,
-    users_icon,
+    size_icon,
     edit_icon,
-    car_icon,
-    location_icon,
-    fuel_icon,
+    fabric_icon,
+    event_icon,
+    color_icon,
     addIcon,
-    carIcon,
-    carIconColored,
+    gownIcon,
+    gownIconColored,
     dashboardIcon,
     dashboardIconColored,
     addIconColored,
@@ -95,7 +95,7 @@ export const menuLinks = [
 export const ownerMenuLinks = [
     { name: "Dashboard", path: "/owner", icon: dashboardIcon, coloredIcon: dashboardIconColored },
     { name: "Add gown", path: "/owner/add-gown", icon: addIcon, coloredIcon: addIconColored },
-    { name: "Manage Gowns", path: "/owner/manage-gown", icon: carIcon, coloredIcon: carIconColored },
+    { name: "Manage Gowns", path: "/owner/manage-gown", icon: carIcon, coloredIcon: gownIconColored },
     { name: "Manage Bookings", path: "/owner/manage-bookings", icon: listIcon, coloredIcon: listIconColored },
 ]
 
