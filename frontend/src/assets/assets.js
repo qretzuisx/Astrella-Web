@@ -42,13 +42,12 @@ import gown_image3 from "./gown_image3.jpg"
 import gown_image4 from "./gown_image4.jpg"
 
 
-export const eventTypeList = ['Wedding', 'Traditional', 'Prom', 'Formal']
-
 // AI RECCOMENDATION LIST
-export const bodyTypeList = ['']
-export const skinToneList = ['']
-export const heightList = ['']
-export const faceShapeList = ['']
+export const eventTypeList = ['Wedding', 'Traditional', 'Prom', 'Formal']
+export const bodyTypeList = ['Hourglass', 'Pear', 'Rectangle', 'Diamond']
+export const skinToneList = ['Warm', 'Cold', 'Nuetral']
+export const heightList = ['Small', 'Medium', 'Tall']
+export const faceShapeList = ['Oval', 'Square', 'Round', 'Heart', 'Diamond']
 
 export const assets = {
     logo,
