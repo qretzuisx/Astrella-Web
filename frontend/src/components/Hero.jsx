@@ -11,7 +11,8 @@ const Hero = () => {
   return (
     <div className='h-screen flex flex-col items-center justify-center gap-14 bg-light text-center'>
       <h1 className='text-4xl md:text-5xl font-semibold'>Astrella, your guide to becoming a Cinderella</h1>
-      <form className="flex flex-col md:flex-row items-start md:items-center justify-between p-6 rounded-lg md:rounded-full w-full max-w-80 md:max-w-200 bg-white shadow-[0px_8px_20px_rgba(0,0,0,0.1)]">
+
+      <form className="flex flex-wrap md:flex-row items-start md:items-center justify-center gap-6 bg-white p-8 md:rounded-full rounded-2xl shadow-[0_8px_20px_rgba(0,0,0,0.1)] w-[80%] max-w-[950px]">
         
         <div className="flex flex-col items-start gap-2">
           <select required value={bodyType} onChange={(e) => setBodyType(e.target.value)} className="p-2 border rounded">
@@ -38,7 +39,7 @@ const Hero = () => {
               </option>))}
           </select>
           <p className='px-1 text-sm text-gray-500'>
-            {height ? height : '(Select heigth)'}</p>
+            {height ? height : '(Select height)'}</p>
         </div>
         <div className="flex flex-col items-start gap-2">
            <select required value={eventType} onChange={(e) => seteventType(e.target.value)} className="p-2 border rounded">
@@ -57,6 +58,11 @@ const Hero = () => {
           <p className='px-1 text-sm text-gray-500'>
             {faceShape ? faceShape : '(Select Face shape)'}</p>
         </div>
+         <button
+          type="submit"
+          className="bg-gray-700 text-white px-5 py-2 rounded-full font-medium hover:bg-gray-800 transition-all">
+          Style recommendations &gt;&gt;
+        </button>
 
       </form>
 
